@@ -18,20 +18,17 @@ class ViewController: UIViewController {
         if (email.text?.isValidEmail)! && (password.text?.isValidPassword)! && (phone.text?.isValidPhoneNumber)! {
             print("valid form")
         } else {
-            Alerts.alertOneButtonCustomAction(title: "Error", message: "Validation Fails", titleBtn: "Ok", viewController: self) {(true) in
+            Alerts.alertOneButtonCustomAction(title: "Error", message: "Validation Fails", titleBtn: "Next View", viewController: self) {(true) in
             self.test()
             self.performSegue(withIdentifier: "segueToSecond", sender: self)
             }
         }
-        
     }
-    
     @IBAction func oneCustomTwoBtns(_ sender: Any) {
         Alerts.alertOneButtonCustomActionAndCancel(title: "1 custom, 2 buttons", message: "One custom action and an extra button for dismiss alert", titleBtn1: "btn1 custom name", titleBtn2: "btn2 custom name", viewController: self) { (true) in
             self.test1()
         }
     }
-    
     @IBAction func twoCustomActions(_ sender: Any) {
         Alerts.alertTwoButtonsCustomAction(title: "1 custom, 2 buttons", message: "One custom action and an extra button for dismiss alert", titleBtn1: "btn1 custom name", titleBtn2: "btn2 custom name", viewController: self, responseBlock1: { (true) in
             self.test1()

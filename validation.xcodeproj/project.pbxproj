@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8822DF282231AE07003A7946 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822DF272231AE07003A7946 /* Requests.swift */; };
 		885743E22230732700073BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885743E12230732700073BFA /* AppDelegate.swift */; };
 		885743E42230732700073BFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885743E32230732700073BFA /* ViewController.swift */; };
 		885743E72230732700073BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885743E52230732700073BFA /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8822DF272231AE07003A7946 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		885743DE2230732700073BFA /* validation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = validation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885743E12230732700073BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		885743E32230732700073BFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				885744152230990A00073BFA /* Alerts.swift */,
+				8822DF272231AE07003A7946 /* Requests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				885744122230929200073BFA /* secondViewController.swift in Sources */,
 				885744162230990A00073BFA /* Alerts.swift in Sources */,
 				885743E42230732700073BFA /* ViewController.swift in Sources */,
+				8822DF282231AE07003A7946 /* Requests.swift in Sources */,
 				8857441022308F6200073BFA /* Validation.swift in Sources */,
 				885743E22230732700073BFA /* AppDelegate.swift in Sources */,
 			);
