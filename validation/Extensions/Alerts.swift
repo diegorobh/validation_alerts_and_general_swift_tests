@@ -43,5 +43,20 @@ class Alerts {
         alert.addAction(btn2)
         viewController.present(alert, animated: true, completion: nil)
     }
+    //alert two custom actions
+    static func alertTwoButtonsCustomAction(title: String, message: String, titleBtn1: String, titleBtn2: String, viewController: UIViewController, responseBlock1: @escaping (Bool) -> Void, responseBlock2: @escaping (Bool) -> Void) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle:UIAlertController.Style.alert)
+        let btn1 = UIAlertAction(title: titleBtn1, style: UIAlertAction.Style.default) {(action: UIAlertAction) in
+            responseBlock1(true)
+            alert.dismiss(animated: true, completion: nil)
+        }
+        let btn2 = UIAlertAction(title: titleBtn2, style: UIAlertAction.Style.cancel) { (action: UIAlertAction) in
+        responseBlock2(true)
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(btn1)
+        alert.addAction(btn2)
+        viewController.present(alert, animated: true, completion: nil)
+    }
     
 }

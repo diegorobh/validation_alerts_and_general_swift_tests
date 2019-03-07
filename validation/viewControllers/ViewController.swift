@@ -33,6 +33,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func twoCustomActions(_ sender: Any) {
+        Alerts.alertTwoButtonsCustomAction(title: "1 custom, 2 buttons", message: "One custom action and an extra button for dismiss alert", titleBtn1: "btn1 custom name", titleBtn2: "btn2 custom name", viewController: self, responseBlock1: { (true) in
+            self.test1()
+        }, responseBlock2: { (true) in
+            self.test2()
+        })
     }
     
     override func viewDidLoad() {
