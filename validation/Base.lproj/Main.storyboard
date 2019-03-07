@@ -59,12 +59,39 @@
                                     <action selector="sendBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEh-Ov-v4s"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EB5-Je-sWs">
+                                <rect key="frame" x="20" y="579" width="335" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqn-Ag-dPd">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Alert 1custom action and cancel button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="oneCustomTwoBtns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEf-9D-S6S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbN-vg-3F9">
+                                        <rect key="frame" x="0.0" y="38" width="335" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Alert 2 custom actions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="twoCustomActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ha0-V2-ETL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="y1I-0T-Wc5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4x5-Rz-XZv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m8K-hq-elL" secondAttribute="trailing" constant="87" id="HSS-Hh-0rQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EB5-Je-sWs" secondAttribute="trailing" constant="20" id="MsG-FJ-eaj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IU9-vN-4Mr" secondAttribute="trailing" constant="87" id="PXE-Gz-FYG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EB5-Je-sWs" secondAttribute="bottom" constant="20" id="Zv2-wq-swV"/>
                             <constraint firstItem="m8K-hq-elL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="brZ-os-7T9"/>
                             <constraint firstItem="IU9-vN-4Mr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="bsH-WN-q8x"/>
                             <constraint firstItem="m8K-hq-elL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="eTl-Tt-Mg1"/>
@@ -72,6 +99,7 @@
                             <constraint firstItem="Bcc-Na-1iO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="kFC-FT-hge"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bcc-Na-1iO" secondAttribute="trailing" constant="87" id="rjW-lY-6MP"/>
                             <constraint firstItem="Bcc-Na-1iO" firstAttribute="top" secondItem="IU9-vN-4Mr" secondAttribute="bottom" constant="20" id="sYQ-Dp-9lF"/>
+                            <constraint firstItem="EB5-Je-sWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yyz-lv-fV9"/>
                             <constraint firstItem="y1I-0T-Wc5" firstAttribute="top" secondItem="Bcc-Na-1iO" secondAttribute="bottom" constant="15" id="zpA-Gf-mzC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -80,6 +108,7 @@
                         <outlet property="email" destination="m8K-hq-elL" id="u84-6c-ZrT"/>
                         <outlet property="password" destination="IU9-vN-4Mr" id="fo5-xi-Bkc"/>
                         <outlet property="phone" destination="Bcc-Na-1iO" id="qNg-fe-ny1"/>
+                        <segue destination="lCP-j7-Pmi" kind="show" identifier="segueToSecond" id="Kuy-lX-t08"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,7 +122,23 @@
                     <view key="view" contentMode="scaleToFill" id="Lue-Nu-lit">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuO-Wd-OEn">
+                                <rect key="frame" x="117.5" y="323" width="140" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VC7-GH-zMd"/>
+                                    <constraint firstAttribute="width" constant="140" id="ZtW-7y-RsS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CuO-Wd-OEn" firstAttribute="centerY" secondItem="Lue-Nu-lit" secondAttribute="centerY" id="Qoj-TK-vhb"/>
+                            <constraint firstItem="CuO-Wd-OEn" firstAttribute="centerX" secondItem="Lue-Nu-lit" secondAttribute="centerX" id="USe-NG-i0m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VpH-wO-2Le"/>
                     </view>
                 </viewController>

@@ -18,27 +18,40 @@ class ViewController: UIViewController {
         if (email.text?.isValidEmail)! && (password.text?.isValidPassword)! && (phone.text?.isValidPhoneNumber)! {
             print("valid form")
         } else {
-            Alerts.alertOneButton(title: "Error", message: "Validation Fails", titleBtn: "Ok", viewController: self, hasAction: true, actionArg: #selector(self.test))
-            print("invalid form")
+            Alerts.alertOneButtonCustomAction(title: "Error", message: "Validation Fails", titleBtn: "Ok", viewController: self) {(true) in
+            self.test()
+            self.performSegue(withIdentifier: "segueToSecond", sender: self)
+            }
         }
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    @objc func test(){
-        print("imprimió el test")
-    }
-
-    static func test1(){
-        print("imprimió el test")
+    @IBAction func oneCustomTwoBtns(_ sender: Any) {
+        Alerts.alertOneButtonCustomActionAndCancel(title: "1 custom, 2 buttons", message: "One custom action and an extra button for dismiss alert", titleBtn1: "btn1 custom name", titleBtn2: "btn2 custom name", viewController: self) { (true) in
+            self.test1()
+        }
     }
     
-    func validateEmail(text: String){
-        print(text)
+    @IBAction func twoCustomActions(_ sender: Any) {
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(self.classForCoder.description())
     }
 
+    public func test(){
+        print("print form test function")
+    }
+    
+    public func test1(){
+        print("print form test function 1")
+    }
+    
+    public func test2(){
+        print("print form test function 2")
+    }
+
+    
 }
 
