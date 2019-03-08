@@ -70,7 +70,7 @@ class secondViewController: UIViewController {
             ]
             requestForPost = requestInfo(url:"https://jsonplaceholder.typicode.com/posts" , method: "POST", parameters: parameters as [String : Any])
             Requests.generalRequest(urlArg: requestForPost.url, paramsArg: requestForPost.parameters, methodArg: requestForPost.method){ data in
-                print (data["email"])
+                print (data[0]["email"])
                 print (data)
             }
         }
