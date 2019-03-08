@@ -21,10 +21,10 @@ class secondViewController: UIViewController {
         if (email.text?.isValidEmail)! && (password.text?.isValidPassword)! {
             
             let parameters = [
+ 
                 "email": email.text,
                 "password": password.text
             ]
- 
             guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
@@ -69,7 +69,10 @@ class secondViewController: UIViewController {
                 "password": password.text
             ]
             requestForPost = requestInfo(url:"https://jsonplaceholder.typicode.com/posts" , method: "POST", parameters: parameters as [String : Any])
-            Requests.generalRequest(urlArg: requestForPost.url, paramsArg: requestForPost.parameters, methodArg: requestForPost.method)
+            Requests.generalRequest(urlArg: requestForPost.url, paramsArg: requestForPost.parameters, methodArg: requestForPost.method){ data in
+                print (data["email"])
+                print (data)
+            }
         }
     }
     

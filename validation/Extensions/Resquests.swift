@@ -17,7 +17,7 @@ struct requestInfo {
 class Requests {
     
     
-    static func generalRequest (urlArg: String, paramsArg: Any, methodArg: String) {
+    static func generalRequest (urlArg: String, paramsArg: Any, methodArg: String, responseData: @escaping (_ data: Dictionary<String, Any>) -> ()) {
         
         guard let url = URL(string: urlArg) else { return }
         var request = URLRequest(url: url)
@@ -28,7 +28,11 @@ class Requests {
         request.httpBody = httpBody
         let session = URLSession.shared
         
-        session.dataTask(with: request) { (data, response, error) in
+        
+        let dispatch = DispatchGroup()
+        
+        dispatch.enter()
+        session.dataTask(with: request){ (data, response, error) in
             
             do{
                 if let httpResponse = response as? HTTPURLResponse {
@@ -42,14 +46,17 @@ class Requests {
                 }
                 if let data = data {
                     do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        print(json)
+                        let json = try JSONSerialization.jsonObject(with: data, options: []) as? Dictionary<String,Any>
+                        responseData(json!)
                     } catch {
-                        print(error)
+                        responseData(["error":"no data"])
                     }
                 }
             }
             }.resume()
+
+        print("ya casi llega al return")
+        
     }
     
 
