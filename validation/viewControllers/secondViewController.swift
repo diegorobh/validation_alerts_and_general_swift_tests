@@ -13,6 +13,9 @@ class secondViewController: UIViewController {
     @IBOutlet weak var responseTextContainer: UITextView!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    
+    var requestForPost = requestInfo()
+    
     @IBAction func getBtn(_ sender: Any) {
         
         if (email.text?.isValidEmail)! && (password.text?.isValidPassword)! {
@@ -60,6 +63,14 @@ class secondViewController: UIViewController {
 
     
     @IBAction func postBtn(_ sender: Any) {
+        if (email.text?.isValidEmail)! && (password.text?.isValidPassword)! {
+            let parameters = [
+                "email": email.text,
+                "password": password.text
+            ]
+            requestForPost = requestInfo(url:"https://jsonplaceholder.typicode.com/posts" , method: "POST", parameters: parameters as [String : Any])
+            Requests.generalRequest(urlArg: requestForPost.url, paramsArg: requestForPost.parameters, methodArg: requestForPost.method)
+        }
     }
     
     override func viewDidLoad() {
