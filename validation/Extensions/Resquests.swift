@@ -48,6 +48,10 @@ class Requests {
                         responseData([["error":"no data"]])
                     }
                 }
+                if error != nil {
+                    print("lo de abajo es el error")
+                    print(error)
+                }
             }
             }.resume()
     }

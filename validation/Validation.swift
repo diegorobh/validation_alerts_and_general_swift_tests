@@ -24,6 +24,26 @@ extension String {
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailChars)
         return emailTest.evaluate(with: self)
     }
+    var isValidCreditCard: Bool {
+        let creditCard = "^([0-9]).{16,}$"
+        let creditCardTest = NSPredicate(format: "SELF MATCHES %@", creditCard)
+        return creditCardTest.evaluate(with: self)
+    }
+    var isNotEmptyString_4: Bool {
+        let notEmptyString = "^.{4,}$"
+        let notEmptyStringTest = NSPredicate(format: "SELF MATCHES %@", notEmptyString)
+        return notEmptyStringTest.evaluate(with: self)
+    }
+    var isNotEmptyString_2: Bool {
+        let notEmptyString = "^.{2,}$"
+        let notEmptyStringTest = NSPredicate(format: "SELF MATCHES %@", notEmptyString)
+        return notEmptyStringTest.evaluate(with: self)
+    }
+    var isValidZIPCode: Bool {
+        let validZIPCode = "[0-9]{4,5}"
+        let validZIPCodeTest = NSPredicate(format: "SELF MATCHES %@", validZIPCode)
+        return validZIPCodeTest.evaluate(with: self)
+    }
 }
 
 /*validation options for pass
