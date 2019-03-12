@@ -18,7 +18,6 @@
 		885744122230929200073BFA /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885744112230929200073BFA /* secondViewController.swift */; };
 		885744162230990A00073BFA /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885744152230990A00073BFA /* Alerts.swift */; };
 		8858A03E2232B52A000F2BF3 /* Resquests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858A03D2232B52A000F2BF3 /* Resquests.swift */; };
-		8858A0402232ECE2000F2BF3 /* ejemploWilman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858A03F2232ECE2000F2BF3 /* ejemploWilman.swift */; };
 		8858A042223322D2000F2BF3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858A041223322D2000F2BF3 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		885744112230929200073BFA /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		885744152230990A00073BFA /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		8858A03D2232B52A000F2BF3 /* Resquests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resquests.swift; sourceTree = "<group>"; };
-		8858A03F2232ECE2000F2BF3 /* ejemploWilman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ejemploWilman.swift; sourceTree = "<group>"; };
 		8858A041223322D2000F2BF3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +152,6 @@
 			children = (
 				885744152230990A00073BFA /* Alerts.swift */,
 				8858A03D2232B52A000F2BF3 /* Resquests.swift */,
-				8858A03F2232ECE2000F2BF3 /* ejemploWilman.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,7 +292,6 @@
 				885743E42230732700073BFA /* ViewController.swift in Sources */,
 				8858A03E2232B52A000F2BF3 /* Resquests.swift in Sources */,
 				8857441022308F6200073BFA /* Validation.swift in Sources */,
-				8858A0402232ECE2000F2BF3 /* ejemploWilman.swift in Sources */,
 				8858A042223322D2000F2BF3 /* ThirdViewController.swift in Sources */,
 				885743E22230732700073BFA /* AppDelegate.swift in Sources */,
 			);
